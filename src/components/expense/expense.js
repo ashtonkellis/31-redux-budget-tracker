@@ -26,14 +26,7 @@ class Expense extends React.Component {
           onComplete={ updateExpense }
           category={ category }
         />
-        <button onClick={() => {
-          const payload = {
-            category,
-            expense,
-          };
-
-          deleteExpense(payload);
-        }}/>
+        <button onClick={() => deleteExpense({ ...expense, categoryId: category._id }) }>Delete</button>
       </li>
     );
   }
