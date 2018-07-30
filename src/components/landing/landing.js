@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as categoryActions from '../../action/category';
 import CategoryForm from '../category-form/category-form';
-import CategoryItem from '../category-item/category-item';
+import Category from '../category/category';
 
 const mapStateToProps = (store) => {
   return {
-    categories: store,
+    categories: store.categories,
+    sections: store.sections,
   };
 };
 
@@ -26,7 +27,7 @@ class Landing extends React.Component {
         <h2>Saved Categories</h2>
         <ul>
         {
-          categories.map(category => <CategoryItem category={category} key={category._id} />)
+          categories.map(category => <Category category={category} key={category._id} />)
         }
         </ul>
       </div>

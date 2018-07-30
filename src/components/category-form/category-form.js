@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const defaultState = {
-  name: 'KJHLKH',
+  name: '',
   budget: 0,
 };
 
