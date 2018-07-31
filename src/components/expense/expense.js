@@ -19,7 +19,7 @@ class Expense extends React.Component {
     } = this.props;
 
     return (
-      <li>
+      <li data-cy="expense">
         <h3>{ expense.name }</h3>
         <ExpenseForm
           expense={ expense }

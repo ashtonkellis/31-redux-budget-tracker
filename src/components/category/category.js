@@ -33,10 +33,10 @@ class Category extends React.Component {
     } = this.props;
 
     return (
-      <li className="category" key={key}>
+      <li className="category" key={key} data-cy="category">
         <h2> { category.name } </h2>
         <CategoryForm category={category} onComplete={categoryUpdate}/>
-        <button onClick={() => categoryDelete(category)}> Delete </button>
+        <button data-cy="category-delete-button" onClick={() => categoryDelete(category)}> Delete </button>
         <ExpenseForm 
           category={ category }
           onComplete={ expenseCreate }
