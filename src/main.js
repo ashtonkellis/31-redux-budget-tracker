@@ -8,9 +8,10 @@ import App from './components/app/app';
 import reducer from './reducer/main';
 import './style/main.scss';
 
-const middleware = {};
+import reporter from './lib/middleware/redux-reporter';
+import session from './lib/middleware/redux-session';
 
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(...middleware)));
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(reporter, session)));
 
 const root = document.createElement('div');
 document.body.appendChild(root);
