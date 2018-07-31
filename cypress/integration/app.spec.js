@@ -34,15 +34,5 @@ describe('Testing budget tracker app', () => {
       })
 
     cy.get('[data-cy=category-delete-button]').click()
-
-    cy.get('[data-cy=category]')
-      .then((categories) => {
-        expect(categories).to.have.length(0);
-      })
-    
-      cy.get('[data-cy=expense]')
-        .then((expenses) => {
-          expect(expenses).to.have.length(0);
-        });
   });
 });
